@@ -1,0 +1,108 @@
+:root {
+    // ### Primary
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+// ### Neutral
+    // (paragraphs)
+    --Transparen-white: hsla(0, 0%, 100%, 0.75);
+    // (background, headings, buttons)
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+.box-1 {
+    background-color: var(--bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+.box-2 {
+    background-color: var(--dark-cyan);
+}
+.box-3 {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.btn-1 {
+    color: var(--bright-orange);
+}
+.btn-2 {
+    color: var(--dark-cyan);
+}
+.btn-3 {
+    color: var(--very-dark-cyan);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 30px;
+    &-box{
+        padding: 40px;
+        max-width: 315px;
+        &-tittle{
+            font-family: 'Big Shoulders Display', sans-serif;
+            color: var(--Very-light-gray);
+            font-size: 2em;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 25px 0;
+        }
+        &-paragraph{
+            
+            color: var(--Transparen-white);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        &-button{
+            font-family: inherit;
+            border-style: none;
+            background-color: var(--Very-light-gray);
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+        &-button:hover {
+            cursor: pointer;
+            color: var(--Very-light-gray);
+            background-color: inherit;
+            outline: 1px solid var(--Very-light-gray);
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .main {
+        flex-direction: row;
+        align-items: center;
+        height: calc(100vh - 12px);
+        &-box{
+            &-paragraph {
+                margin-bottom: 100px;
+            }
+        }
+    }
+    .box-1 {
+        border-radius: 10px 0 0  10px;
+    }
+    .box-3 {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+ }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
